@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — BackTrack</title>
+<meta name="description" content="What stays on your phone, what leaves it, and when. BackTrack has no accounts, no analytics, no advertising.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://j1nek.github.io/backtrack-site/privacy.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="assets/logo-192.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BackTrack">
+<meta property="og:url" content="https://j1nek.github.io/backtrack-site/privacy.html">
+<meta property="og:title" content="Privacy Policy — BackTrack">
+<meta property="og:description" content="What stays on your phone, what leaves it, and when. No accounts, no analytics, no advertising.">
+<meta property="og:image" content="https://j1nek.github.io/backtrack-site/assets/social-card.png">
+</head>
+<body>
+
+<header class="appbar">
+  <div class="wrap">
+    <img src="assets/logo.svg" alt="" width="28" height="28">
+    <span class="appname">BackTrack</span>
+    <nav>
+      <a href="index.html#back">Getting back</a>
+      <a href="index.html#start">First run</a>
+      <a href="index.html#main">Main screen</a>
+      <a href="index.html#map">Map</a>
+      <a href="index.html#measure">Measuring</a>
+      <a href="index.html#files">Files</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <p class="kicker">Legal</p>
+  <h1 style="font-size:34px;margin:0 0 8px">Privacy Policy</h1>
+  <p class="updated">Last updated: 13 September 2026</p>
+
+  <p>BackTrack is a GPS compass, waypoint and track recorder built to work without a signal.
+  This policy describes exactly what stays on your phone, what leaves it, and when.</p>
+
+  <p>There are no analytics, no advertising, no crash reporting and no user accounts. There is
+  nothing to sign up for and nothing to log in to.</p>
+
+  <h2>1. What stays on your phone</h2>
+  <p>Everything you create in BackTrack is stored only on the device:</p>
+  <ul>
+    <li>waypoints (name, note, icon, coordinates, altitude, accuracy, time),</li>
+    <li>recorded tracks and the points that make them up,</li>
+    <li>planned routes and measurements,</li>
+    <li>your settings (units, coordinate format, theme, compass style, map preferences),</li>
+    <li>map areas you have downloaded for offline use.</li>
+  </ul>
+  <p>None of it is uploaded anywhere. It is not backed up to us, it is not synchronised between
+  devices, and we cannot read it. If you uninstall the app it is gone, unless you exported it
+  yourself to a GPX, KML or KMZ file.</p>
+
+  <h2>2. Location</h2>
+  <p>BackTrack reads your position from the phone's GNSS receiver and sensors in order to show a
+  compass, draw your position on the map and guide you back to a point. A position is written to
+  storage only when you ask for it — when you mark a point or record a track.</p>
+  <p><b>Location never leaves the device.</b> It is not sent to us and not sent to anyone else.</p>
+
+  <h2>3. What leaves your phone</h2>
+  <p>Three things, and only these.</p>
+
+  <h3>3.1 Map tiles, when online maps are switched on</h3>
+  <p>The detailed map is downloaded from our map server at <code>tiles.forgelabs.systems</code>,
+  which is served through Cloudflare. When the app asks for a piece of the map, that request
+  necessarily carries:</p>
+  <ul>
+    <li>your device's IP address, as any internet request does,</li>
+    <li>the coordinates of the map tile requested — which indicates the general area you are
+        looking at, not your position,</li>
+    <li>a standard user agent.</li>
+  </ul>
+  <p>No account, device identifier or advertising ID is attached, and requests are not linked to
+  each other or to you. We do not build profiles from them. Cloudflare processes these requests
+  as our infrastructure provider and keeps short-lived operational logs for security and abuse
+  prevention.</p>
+  <p><b>You can switch this off completely.</b> Turn the network button (<code>NET</code>) off on
+  the map screen, or download the area you need in advance — a downloaded area is drawn entirely
+  from your phone and asks the network for nothing. The compass, waypoints, tracks and file
+  export never use the network at all.</p>
+  <p>Map data is © OpenStreetMap contributors, licensed under ODbL. The tiles are prepared by us
+  from that data; your requests go to our server, not to OpenStreetMap.</p>
+
+  <h3>3.2 Purchases</h3>
+  <p>BackTrack PRO is a one-time purchase handled entirely by <b>Google Play Billing</b>. Google
+  processes the payment and tells the app whether the purchase exists. We never see or receive
+  your payment details, and the app stores only a yes/no flag for whether PRO is active.</p>
+
+  <h3>3.3 Google Play services in the app</h3>
+  <p>The app uses Google Play's in-app update mechanism to offer you a new version. That
+  communication is between your device and Google Play, under
+  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+  <p>If you tap a link inside the app — sharing a point, opening this policy or the Play listing —
+  you leave BackTrack and that destination's own policy applies.</p>
+
+  <h2>4. Permissions and why they are needed</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td><b>Location</b> (fine and coarse)</td><td>The compass, the map position, marking points, recording tracks.</td></tr>
+    <tr><td><b>Foreground service</b> (location)</td><td>Keeps recording a track while the screen is off.</td></tr>
+    <tr><td><b>Notifications</b></td><td>Shows the recording notification with time, distance and the current goal.</td></tr>
+    <tr><td><b>Internet, network state</b></td><td>Downloading map tiles and offline areas; nothing else.</td></tr>
+    <tr><td><b>Vibration</b></td><td>Confirmation of long-press actions.</td></tr>
+    <tr><td><b>Ignore battery optimisations</b></td><td>Optional, and only asked the first time you record. Stops the system suspending a long recording. You can change it later in Settings → Background recording.</td></tr>
+  </table>
+  <p>Location can be revoked at any time in Android settings. The app keeps working as a plain
+  compass; it will tell you it has no position rather than pretend.</p>
+
+  <h2>5. Children</h2>
+  <p>BackTrack has no accounts, no chat, no user-generated content shared with anyone, and no
+  advertising. It is not directed at children and collects nothing that could identify one.</p>
+
+  <h2>6. Data we hold about you</h2>
+  <p>None that identifies you. We hold no user database. The only records that exist are the
+  short-lived server logs described in 3.1, which we do not connect to a person.</p>
+  <p>Because we hold no personal data tied to your identity, there is no account to delete. Data
+  on your phone is deleted by deleting it in the app or uninstalling the app. Downloaded map
+  areas can be removed at any time from <b>Settings → Downloaded maps</b>.</p>
+
+  <h2>7. Changes</h2>
+  <p>If this policy changes, the date at the top changes with it. Material changes are stated in
+  the release notes of the version that introduces them.</p>
+
+  <h2>8. Contact</h2>
+  <p>ForgeLabs Systems<br>
+  <a href="mailto:iwelautomatyka@gmail.com">iwelautomatyka@gmail.com</a><br>
+  <a href="https://www.forgelabs.systems/">forgelabs.systems</a></p>
+</main>
+
+<footer class="wrap">
+  <div class="row">
+    <span>© 2026 ForgeLabs Systems</span>
+    <span>Map data © OpenStreetMap contributors (ODbL)</span>
+    <a href="index.html">Manual</a>
+    <a href="mailto:iwelautomatyka@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

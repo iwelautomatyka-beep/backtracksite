@@ -1,0 +1,294 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   BackTrack — strona produktu i instrukcja obslugi.
+
+   Kolory nie sa dobrane do strony; sa WYJETE Z APLIKACJI (ui/theme/Color.kt,
+   TacticalPalette). Czarne tlo, wegiel na kartach, zielen 0xFF00E676, szary
+   podpis 0x6A6A6A. Tak samo czcionka: JetBrains Mono, ten sam plik, ktory
+   siedzi w APK (SIL OFL 1.1). Chodzi o to, zeby ktos, kto trafi tu z Google
+   Play, widzial ten sam przyrzad, a nie stronke o przyrzadzie.
+   ────────────────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/fonts/jetbrains_mono.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/fonts/jetbrains_mono_bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --card: #111111;
+  --card-hi: #1a1a1a;
+  --divider: #1e1e1e;
+  --green: #00e676;
+  --yellow: #ffd600;
+  --red: #ff1744;
+  --blue: #2979ff;
+  --text: #ffffff;
+  --sub: #6a6a6a;
+  --sand: #cac0a0;   /* kolor ladu z mapy */
+  --water: #7e9fbc;  /* kolor wody z mapy */
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+/* Obrazki trzymaja proporcje, zawsze i bez wyjatkow.
+   Atrybuty width/height w HTML sa po to, zeby przegladarka zarezerwowala miejsce zanim
+   plik dojdzie - ale bez height:auto ten drugi zaczyna dyktowac wysokosc renderowana i
+   kazdy zrzut szerszy niz jego ramka wychodzi rozciagniety. Regula globalna, bo laczenie
+   tego z kazda ramka z osobna konczy sie tak, ze nastepna nowa ramka znowu o tym zapomni. */
+img { max-width: 100%; height: auto; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ── nagłowek ─────────────────────────────────────────────────────────── */
+/* ── hero ─────────────────────────────────────────────────────────────── */
+.hero { padding: 72px 0 56px; border-bottom: 1px solid var(--divider); }
+.hero h1 {
+  font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 18px;
+  letter-spacing: -0.5px;
+}
+.hero .lead { font-size: clamp(18px, 2.4vw, 21px); color: #cfcfcf; max-width: 62ch; margin: 0 0 14px; }
+.hero .sub { color: var(--sub); max-width: 62ch; margin: 0 0 30px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+/* Zdjecie w naglowku dostaje sufit, bo proporcje to nie wszystko.
+   Kolumna ma 400 px, wiec zrzut telefonu renderowal sie 400x786 - proporcje idealne, a
+   mimo to wieksze niz okno przegladarki jest wysokie: na ekranie widac bylo powiekszony
+   wycinek tarczy i nic poza tym. Sufit w pikselach trzyma go w rozmiarze telefonu, sufit
+   w jednostkach okna gwarantuje, ze zmiesci sie w pierwszym ekranie takze na niskim oknie. */
+.hero-shot img {
+  /* OBA wymiary auto - inaczej sufit wysokosci sciska obrazek.
+     Bylo `width: 100%` razem z `max-height: 78vh`. To sie wyklucza: szerokosc
+     ustala wtedy kolumna, wysokosc liczy sie z proporcji, a potem sufit
+     PRZYCINA sama wysokosc i nie rusza szerokosci - zdjecie telefonu robilo
+     sie szersze niz wysokie. Zglosil to wlasciciel, widac to golym okiem.
+     Przy width i height na auto przegladarka stosuje oba sufity
+     proporcjonalnie i ksztalt zostaje. */
+  width: auto; height: auto;
+  max-width: min(400px, 100%); max-height: 78vh;
+  display: block; margin: 0 auto;
+  border-radius: 20px; border: 1px solid var(--divider);
+}
+
+.badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-weight: 700; font-size: 14px; letter-spacing: 1px;
+  padding: 13px 22px; border-radius: 10px;
+  background: var(--green); color: #000; border: 1px solid var(--green);
+}
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+.btn.ghost { background: transparent; color: var(--green); }
+.btn.ghost:hover { background: rgba(0,230,118,0.08); }
+
+/* ── sekcje ───────────────────────────────────────────────────────────── */
+section { padding: 64px 0; border-bottom: 1px solid var(--divider); }
+.kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--sub); margin: 0 0 10px;
+}
+h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 14px; letter-spacing: -0.3px; }
+h3 { font-size: 20px; margin: 32px 0 8px; }
+p { max-width: 68ch; }
+.muted { color: var(--sub); }
+
+/* ── zrzut z opisanymi przyciskami ────────────────────────────────────── */
+.shot {
+  display: grid; grid-template-columns: minmax(240px, 340px) 1fr;
+  gap: 36px; align-items: start; margin-top: 28px;
+}
+.shot .frame {
+  position: relative; border-radius: 22px; overflow: hidden;
+  border: 1px solid #262626; background: var(--card);
+}
+.shot .frame img { display: block; width: 100%; height: auto; }
+
+/* Kropki lezace NA zrzucie - pozycja w procentach, wiec obrazek moze zmienic
+   rozmiar, a opisy zostaja tam, gdzie byly. */
+.pin {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--green); color: #000;
+  font-family: var(--mono); font-weight: 700; font-size: 13px;
+  display: grid; place-items: center;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.75), 0 2px 10px rgba(0,0,0,0.6);
+}
+
+ol.legend { list-style: none; counter-reset: p; margin: 0; padding: 0; }
+ol.legend li {
+  counter-increment: p; position: relative;
+  padding: 0 0 18px 44px; margin: 0;
+}
+ol.legend li::before {
+  content: counter(p);
+  position: absolute; left: 0; top: 2px;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: transparent; color: var(--green);
+  border: 1px solid var(--green);
+  font-family: var(--mono); font-weight: 700; font-size: 13px;
+  display: grid; place-items: center;
+}
+ol.legend b { font-family: var(--mono); font-size: 14px; letter-spacing: 0.5px; }
+ol.legend span { display: block; color: var(--sub); font-size: 15px; line-height: 1.55; }
+
+/* ── karty ────────────────────────────────────────────────────────────── */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 26px; }
+.card {
+  background: var(--card); border: 1px solid var(--divider);
+  border-radius: 14px; padding: 22px;
+}
+.card h4 { margin: 0 0 8px; font-family: var(--mono); font-size: 14px; letter-spacing: 1px; color: var(--green); }
+.card p { margin: 0; color: #cfcfcf; font-size: 15.5px; }
+
+/* ── PRO ──────────────────────────────────────────────────────────────── */
+.pro {
+  background: linear-gradient(180deg, rgba(0,230,118,0.07), rgba(0,0,0,0));
+  border: 1px solid rgba(0,230,118,0.35); border-radius: 18px;
+  padding: 32px; margin-top: 26px;
+}
+.pro .price { font-family: var(--mono); font-size: 13px; letter-spacing: 2px; color: var(--green); }
+.pro ul { list-style: none; padding: 0; margin: 18px 0 0; }
+.pro li { padding-left: 26px; position: relative; margin-bottom: 10px; color: #cfcfcf; }
+.pro li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+.pro .free { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--divider); }
+
+/* ── tabela ───────────────────────────────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; margin-top: 22px; font-size: 15.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--divider); vertical-align: top; }
+th { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--sub); font-weight: 400; }
+td b { font-family: var(--mono); font-size: 14px; }
+
+/* ── stopka ───────────────────────────────────────────────────────────── */
+footer { padding: 44px 0 64px; color: var(--sub); font-size: 14px; }
+footer a { color: var(--sub); text-decoration: underline; }
+footer a:hover { color: var(--green); }
+footer .row { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; }
+
+/* ── proza polityki prywatnosci ───────────────────────────────────────── */
+.doc { padding: 56px 0 24px; }
+.doc h2 { margin-top: 42px; font-size: 22px; }
+.doc h2:first-of-type { margin-top: 24px; }
+.doc p, .doc li { color: #cfcfcf; }
+.doc ul { max-width: 68ch; }
+.doc .updated { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: var(--sub); }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-shot { max-width: 320px; }
+  .shot { grid-template-columns: 1fr; }
+  .shot .frame { max-width: 340px; }
+}
+
+/* ── ikona aplikacji w naglowku sekcji hero ───────────────────────────── */
+.appbar { display: flex; align-items: center; gap: 16px; margin: 0 0 22px; }
+.appbar img {
+  width: 76px; height: 76px; border-radius: 18px;
+  border: 1px solid var(--divider);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+.appname {
+  font-family: var(--mono); font-weight: 700; font-size: 20px;
+  letter-spacing: 1px; margin: 0 0 2px;
+}
+
+/* galeria zrzutow */
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 26px; margin-top: 28px;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%; height: auto; display: block; border-radius: 14px;
+  border: 1px solid #262626; background: var(--card);
+}
+.gallery figcaption { margin-top: 10px; }
+.gallery b {
+  display: block; font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.5px; color: var(--text); margin-bottom: 3px;
+}
+.gallery span { color: var(--sub); font-size: 14px; line-height: 1.5; }
+
+/* ───────────────────────────────────────────────────────────────
+   Pasek na gorze strony.
+   Poprzednia wersja .appbar byla wierszem logo + nazwa w tresci, bez
+   nawigacji; instrukcja ma kilkanascie sekcji i bez spisu na gorze
+   czyta sie ja przewijaniem na oslep. Regula ponizej NADPISUJE rozmiar
+   logo, bo 76 px z tamtego ukladu w pasku wyglada jak pomylka.
+   ─────────────────────────────────────────────────────────────── */
+header.appbar {
+  position: sticky; top: 0; z-index: 20;
+  margin: 0; padding: 10px 0;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--divider);
+}
+header.appbar .wrap {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+header.appbar img { width: 28px; height: 28px; border-radius: 7px; box-shadow: none; }
+header.appbar .appname {
+  font-family: var(--mono); font-weight: 700; letter-spacing: 1px;
+  font-size: 15px; color: var(--text);
+}
+header.appbar nav {
+  display: flex; flex-wrap: wrap; gap: 4px 20px; margin-left: auto;
+  /* min-width: 0 jest tu konieczne, nie kosmetyczne.
+     Element flex ma domyslnie min-width: auto, wiec ODMAWIA zwezenia
+     ponizej szerokosci swojej tresci: szesc linkow z white-space: nowrap
+     rozpychalo cala strone i przy 400 px tekst akapitow wychodzil poza
+     prawa krawedz. Zmierzone renderem - 23 wiersze tresci dotykaly
+     krawedzi okna. */
+  min-width: 0;
+}
+header.appbar nav a {
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.5px;
+  color: var(--sub); text-decoration: none; white-space: nowrap;
+  padding: 4px 0; border-bottom: 1px solid transparent;
+}
+header.appbar nav a:hover { color: var(--green); border-bottom-color: var(--green); }
+
+/* Podtytul w sekcji instrukcji - h3 wewnatrz .shot stoi nad akapitem
+   i nie ma byc tak duzy jak naglowek sekcji. */
+.shot h3 {
+  margin: 0 0 10px; font-family: var(--mono); font-size: 14px;
+  letter-spacing: 1px; color: var(--green); text-transform: uppercase;
+}
+.shot h3 ~ h3 { margin-top: 22px; }
+.shot ul { margin: 10px 0 0; padding-left: 20px; }
+.shot li { margin-bottom: 6px; }
+.shot code {
+  font-family: var(--mono); font-size: 0.9em;
+  background: var(--card-hi); padding: 1px 5px; border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  /* Na waskim ekranie nawigacja dostaje wlasny wiersz - szesc pozycji obok
+     nazwy aplikacji i tak by sie nie zmiescilo, a zawiniete w polowie czyta
+     sie gorzej niz przeniesione w calosci. */
+  header.appbar nav { margin-left: 0; gap: 4px 14px; width: 100%; }
+  header.appbar nav a { font-size: 12px; }
+}

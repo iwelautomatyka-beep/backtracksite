@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BackTrack — the manual. Offline GPS compass, routes, tracks and measuring.</title>
+<meta name="description" content="The full manual for BackTrack: every screen and every function explained, with screenshots. Offline GPS compass, route following, track recording, distance and area measuring, GPX/KML import and export. No signal, no account, no ads.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://j1nek.github.io/backtrack-site/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="assets/logo-192.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BackTrack">
+<meta property="og:locale" content="en">
+<meta property="og:url" content="https://j1nek.github.io/backtrack-site/">
+<meta property="og:title" content="BackTrack — the manual">
+<meta property="og:description" content="Every screen and every function explained, with screenshots. Works with no signal, no account and no ads.">
+<meta property="og:image" content="https://j1nek.github.io/backtrack-site/assets/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BackTrack — offline GPS navigator for Android">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BackTrack — the manual">
+<meta name="twitter:description" content="Every screen and every function explained, with screenshots.">
+<meta name="twitter:image" content="https://j1nek.github.io/backtrack-site/assets/social-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "BackTrack",
+  "operatingSystem": "Android 8.0+",
+  "applicationCategory": "TravelApplication",
+  "applicationSubCategory": "Navigation",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Offline GPS compass, waypoints, route following, track recording and field measuring for Android."
+}
+</script>
+</head>
+<body>
+
+<header class="appbar">
+  <div class="wrap">
+    <img src="assets/logo.svg" alt="" width="28" height="28">
+    <span class="appname">BackTrack</span>
+    <nav>
+      <a href="#back">Getting back</a>
+      <a href="#start">First run</a>
+      <a href="#main">Main screen</a>
+      <a href="#map">Map</a>
+      <a href="#measure">Measuring</a>
+      <a href="#files">Files</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">THE MANUAL</p>
+      <h1>Mark where you stand.<br>Walk away. Walk back.</h1>
+      <p>BackTrack is a gyro compass and a map that keep working when the signal does not.
+         No account, no ads, nothing leaves the phone.</p>
+      <p class="muted">This page is the full manual: every screen and every function, in the order
+         you will meet them. Every screenshot is the running app on a phone — not a mock-up,
+         and not a drawing.</p>
+      <div class="badges">
+        <span>Android 8.0+</span>
+        <span>Works offline</span>
+        <span>No account</span>
+        <span>No ads</span>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <img src="assets/shots/map.webp" width="540" height="1170"
+           alt="BackTrack map screen: a planned route drawn in yellow with a START marker, the position chevron on the line, camera controls on the right and tools on the left.">
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+<!-- ───────────────────────── THE ONE PROCEDURE ───────────────────────── -->
+<section id="back">
+  <h2>The one thing to know: getting back</h2>
+  <p>Everything else in this manual is detail. This is the app. Three presses, and you can do
+     the first one before you have read anything.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h4>1 · MARK IT</h4>
+      <p>At the car, the boat, the trailhead, the gate you came through — <b>tap MARK
+         POINT</b>. The strip says <b>MARKED</b>. That is the whole step; there is no dialog to
+         get through.</p>
+    </div>
+    <div class="card">
+      <h4>2 · GO</h4>
+      <p>Walk, ride, paddle, hunt, pick mushrooms. Put the phone in your pocket. The app needs
+         nothing from you in between and no signal at any point.</p>
+    </div>
+    <div class="card">
+      <h4>3 · BACK TO LAST POINT</h4>
+      <p><b>Tap it</b> and the instrument turns around. The arrow points at your point, the
+         strip counts the distance down, and both keep working with no network.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/compass.webp" width="540" height="1170"
+           alt="Main screen with the arrow pointing towards the saved point and the distance counting down on the readout strip.">
+    </div>
+    <div>
+      <h3>What you will see on the way back</h3>
+      <p>The green arrow on the dial points at the point, not at north — turn until it is at
+         the top and walk that way. The left half of the readout strip is the distance
+         remaining, and it counts down as you close in.</p>
+      <p>When you are within arrival range the strip says <b>ARRIVED</b> and the arrow stops
+         pretending to know a direction, because at ten metres a bearing is noise.</p>
+      <h3>If you want the start of a recording instead</h3>
+      <p>Holding <b>START TRACK</b> to begin a recording also drops a start point where you
+         stood. So after a day out, "back to where I parked" is the same one press — the point
+         is already there and it is the newest one.</p>
+      <h3>If you want an older point</h3>
+      <p><b>Hold BACK TO LAST POINT</b> to open the list and pick any point you have saved.
+         Every row shows how far away it is from where you are standing now.</p>
+      <p class="muted">None of this needs a map, a subscription or a signal. It is a compass, a
+         coordinate and arithmetic.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── FIRST RUN ───────────────────────── -->
+<section id="start">
+  <h2>First run</h2>
+  <p>The app asks for location once and never again. Until the receiver has a position, the
+     action buttons stay dim — a button that pretends to work without a fix is worse than a
+     button that waits.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/welcome.webp" width="540" height="1170"
+           alt="BackTrack welcome screen with the app logo and a one-line description.">
+    </div>
+    <div>
+      <h3>Go outside first</h3>
+      <p>A GPS receiver needs sky. Indoors you will see <b>SEARCHING</b> and the buttons will
+         stay asleep; by a window it may take a minute; outdoors it is usually seconds.</p>
+      <p>When the position arrives the status line turns to <b>GPS LOCK</b> and everything
+         wakes up at once.</p>
+      <p class="muted">Skip the tour if you like — nothing in the app is hidden behind it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── MAIN SCREEN ───────────────────────── -->
+<section id="main">
+  <h2>The main screen, every part of it</h2>
+  <p>One instrument, one readout strip, six tiles. Nothing moves, so your thumb learns the
+     positions once and keeps them. Several tiles do a second thing when you <b>hold</b> them —
+     the labels tell you which, and this is the list.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/compass.webp" width="540" height="1170"
+           alt="Main screen with the compass face, the readout strip and six tiles, numbered one to nine.">
+      <span class="pin" style="left:10%; top:9%">1</span>
+      <span class="pin" style="left:50%; top:20%">2</span>
+      <span class="pin" style="left:8%; top:57%">3</span>
+      <span class="pin" style="left:8%;  top:65%">4</span>
+      <span class="pin" style="left:40%; top:65%">5</span>
+      <span class="pin" style="left:72%; top:65%">6</span>
+      <span class="pin" style="left:8%;  top:77%">7</span>
+      <span class="pin" style="left:40%; top:77%">8</span>
+      <span class="pin" style="left:72%; top:77%">9</span>
+    </div>
+    <div>
+      <h3>1 · The signal bar</h3>
+      <p>Five bars and a word: <b>SEARCHING</b>, <b>GPS LOCK</b>, or how long ago the last fix
+         was if it has gone stale. <b>Tap it</b> to open the GPS signal screen — accuracy,
+         satellites, interference. If the app suspects jamming, the tap goes straight to that
+         part. <b>Holding</b> it opens the same screen with a short buzz.</p>
+
+      <h3>2 · The instrument</h3>
+      <p><b>Tap the dial to change face.</b> Five of them, in this order: compass → level →
+         map → trip computer → speedometer → back to the compass. Your choice is remembered
+         between sessions.</p>
+      <p><b>Hold the dial</b> while the level is showing and it re-zeroes against however the
+         phone is lying right now — for taking a second reading off a different surface
+         without leaving the instrument.</p>
+      <p>The small <b>MAG</b> and <b>GPS</b> lamps under the heading say which source the
+         heading is coming from at this moment.</p>
+
+      <h3>3 · The readout strip</h3>
+      <p>Distance on the left, speed on the right, in seven-segment digits you can read at
+         arm's length. While you are navigating, the left half shows how far is left to the
+         target; otherwise it shows your heading. Notices such as <b>ARRIVED</b> or
+         <b>COMPASS READY</b> take the strip over for a few seconds and scroll if they are too
+         long to fit.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/sun-moon.webp" width="540" height="1170"
+           alt="Main screen with the sun marker on the compass rim, sunrise and sunset times, and the moon in its real phase.">
+    </div>
+    <div>
+      <h3>4 · ALTITUDE — and hold it for the sun</h3>
+      <p>The tile shows height above sea level, smoothed so a single poor fix does not make it
+         jump. Dashes mean the receiver has not offered a trustworthy height yet.</p>
+      <p><b>Hold it</b> and the sun appears on the rim of the compass in the direction it is
+         actually in, with sunrise and sunset for your position and today. The moon comes with
+         it, drawn in its real phase with the lit percentage. Hold again to put them away.</p>
+      <p class="muted">On a fresh install the tile says <b>HOLD FOR SUN</b> until you have
+         found it once. After that it never mentions it again.</p>
+
+      <h3>5 · The target tile</h3>
+      <p>Normally your bearing. Once you are navigating, it takes the <b>name of the target</b>
+         and grows a small <b>×</b>. Tapping it — or holding it — stops the guidance and says
+         <b>NAV STOPPED</b>. It turns red and reads <b>OFF ROUTE</b> when you leave a route you
+         were following, and <b>TO ROUTE</b> while you are making your way back to one.</p>
+
+      <h3>6 · MODE — which compass you are reading</h3>
+      <p><b>Hold it</b> to cycle the heading source:</p>
+      <ul>
+        <li><b>AUTO</b> — the default. Gyroscope carries the heading, the magnetometer sets it
+            straight when the magnetic field is clean, GPS corrects it while you move.</li>
+        <li><b>MAG</b> — magnetometer only. Honest near nothing metal, hopeless near a car.</li>
+        <li><b>GPS</b> — course over ground only. Needs you to be moving, immune to metal.</li>
+      </ul>
+      <p>If the phone has no usable magnetometer the MAG step is skipped, so you cannot land in
+         a mode with nothing to read from.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/save-point.webp" width="540" height="1170"
+           alt="Save point sheet opened by holding MARK POINT: name, icons, notes, and the SAVE, SAVE &amp; GO and AVERAGE buttons.">
+    </div>
+    <div>
+      <h3>7 · MARK POINT — tap saves, hold asks</h3>
+      <p><b>Tap</b> and the point is saved where you stand, with the next free name, and the
+         strip says <b>MARKED</b>. One thumb, no dialog — which is the whole point when it is
+         raining.</p>
+      <p><b>Hold</b> and you get the sheet instead: name it, give it an icon so a spring is not
+         the same as a gate on the map, add a note, flag it as a start point, or press
+         <b>AVERAGE</b> and stand still for thirty seconds for a properly placed one.</p>
+
+      <h3>8 · START TRACK — hold to start, hold to stop</h3>
+      <p>A tap does nothing on purpose and the tile says so: <b>HOLD TO START</b>. A single tap
+         is what a pocket does, and a pocket must not be able to end a five-hour recording.</p>
+      <p>While recording, the tile turns red, pulses, counts the elapsed time and reads
+         <b>HOLD TO STOP</b>. Starting also drops a <b>start point</b> where you stood, so
+         "back to where I left the car" is one press later on.</p>
+
+      <h3>9 · BACK TO LAST POINT</h3>
+      <p><b>Tap</b> and the instrument turns around: the arrow points at the last point you
+         saved and the strip counts down the distance. This is the button the app is named
+         after.</p>
+      <p><b>Hold</b> it to open the full list instead, and pick a different one.</p>
+
+      <h3>When the tiles are dim</h3>
+      <p>The three lower tiles stay dim until there is a <i>current</i> position — not merely
+         any position. A button that writes down the wrong place is worse than a button that
+         waits, and a fix from yesterday's walk is the wrong place.</p>
+      <p class="muted">Swiping left goes to the map, swiping right to settings — the same
+         places the bottom bar takes you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── FACES ───────────────────────── -->
+<section id="faces">
+  <h2>Five faces, one instrument</h2>
+  <p>Tap the dial to cycle. The choice is remembered, and changing face never costs you your
+     heading or your navigation — the arrow to your target is drawn on every one of them.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/compass.webp" width="540" height="1170"
+           alt="Compass face showing heading 050 degrees with the target arrow.">
+    </div>
+    <div>
+      <h3>1 · Compass</h3>
+      <p>A gyro compass, not a magnetometer needle. The gyroscope carries the heading through
+         the moments a magnetic compass cannot be trusted — near a car, a fence, a rifle, a
+         phone mount — and the magnetometer quietly corrects the drift when the field is clean
+         again.</p>
+      <p>The two lamps tell you which source is in charge. If the field is disturbed the app
+         says <b>COMPASS UNSURE</b> and shows you how to wave the phone to fix it.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/speedo.webp" width="540" height="1170"
+           alt="Speedometer face: a 270 degree scale from 0 to 40 km/h with a needle, the exact speed in digits below and a peak marker.">
+    </div>
+    <div>
+      <h3>2 · Speedometer</h3>
+      <p>A car-style dial with a real scale and a needle, and the exact figure underneath.
+         The needle is smoothed on purpose: GPS reports once a second and a raw needle would
+         twitch at every reading.</p>
+      <p>The scale steps <b>40 → 80 → 160 km/h</b> and only ever upward while the app is
+         running, so the numbers stay where your eye left them. A yellow mark on the rim and
+         a <b>MAX</b> line record the fastest moment of the ride.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/trip.webp" width="540" height="1170"
+           alt="Trip computer face: speed in large digits, DST, LEFT and TGT rows, and a green arc around the rim showing progress along the route.">
+    </div>
+    <div>
+      <h3>3 · Trip computer</h3>
+      <p>Speed, distance covered, time recording, and distance to your target. When a route is
+         loaded the ring around the rim fills as you go: one glance says <i>about three
+         quarters done</i> without reading a number and comparing it to one you remembered
+         twenty minutes ago.</p>
+      <p>With a route loaded the <b>LEFT</b> row shows exactly how much of it remains. With no
+         route, the ring is not drawn at all and the row shows your average speed instead.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/level.webp" width="540" height="1170"
+           alt="Artificial horizon face showing pitch and roll against a blue and sand background.">
+    </div>
+    <div>
+      <h3>4 · Level</h3>
+      <p>An artificial horizon. Zeroed against however the phone is held when you switch to it,
+         so it answers <i>how far from where I started</i> — which is the question when you are
+         levelling a mount, a panel or a camp table.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/dial-map.webp" width="540" height="1170"
+           alt="Map face: a small live map inside the instrument circle with the route and the position chevron.">
+    </div>
+    <div>
+      <h3>5 · Map</h3>
+      <p>The map inside the instrument, the way a car cluster does it. Enough to see the next
+         bend without leaving the screen your hands already know.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── POINTS ───────────────────────── -->
+<section id="points">
+  <h2>Saving a point</h2>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/save-point.webp" width="540" height="1170"
+           alt="Save point sheet: name field, a grid of icons, notes, a start point checkbox and the SAVE, SAVE &amp; GO and AVERAGE buttons.">
+    </div>
+    <div>
+      <h3>Mark point</h3>
+      <p>Tap <b>MARK POINT</b> and the point is saved where you stand. Give it a name, pick an
+         icon so you can tell a spring from a gate on the map, and add a note if you want one.</p>
+      <p><b>SAVE &amp; GO</b> saves it and starts guiding you to it at once. <b>Mark as Start
+         Point</b> flags it as the place you came from — the one you will want back.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/averaging.webp" width="540" height="1170"
+           alt="Averaging in progress: MARK &amp; AVERAGE panel counting 15 samples over 7 of 30 seconds with a progress bar.">
+    </div>
+    <div>
+      <h3>Averaged point — when one reading is not enough</h3>
+      <p>A single GPS fix wanders by several metres. If the point matters — a boundary peg, a
+         hive, a trap, a survey mark — press <b>AVERAGE</b> and stand still. The app collects
+         readings for thirty seconds and takes the middle of them.</p>
+      <p>Standing still is the whole trick: the errors in consecutive fixes pull in different
+         directions and cancel, which a single reading can never do.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/averaged.webp" width="540" height="1170"
+           alt="Averaged point result showing coordinates, altitude, sigma 39.54 m, standard error 5.28 m and 56 samples.">
+    </div>
+    <div>
+      <h3>…and it shows you how good it was</h3>
+      <p>When it finishes you get the coordinates, the height, and two numbers that tell you
+         whether to trust them:</p>
+      <ul>
+        <li><b>σ</b> — how much the individual readings scattered.</li>
+        <li><b>SE</b> — how tight the average itself is. This is the one that matters.</li>
+        <li><b>pts</b> — how many readings went in.</li>
+      </ul>
+      <p>Save it or discard it. An averaged point that came out poor is worth knowing about
+         before you rely on it, not after.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── MAP ───────────────────────── -->
+<section id="map">
+  <h2>The map</h2>
+  <p>Controls are split by what they do. <b>How you look</b> at the map sits on the right;
+     <b>what you do</b> with it sits on the left. Both columns are within a thumb.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/map.webp" width="540" height="1170"
+           alt="Map screen with a planned route, START marker, position chevron, left tool column and right camera column.">
+      <span class="pin" style="left:9%;  top:38%">1</span>
+      <span class="pin" style="left:9%;  top:62%">2</span>
+      <span class="pin" style="left:91%; top:54%">3</span>
+      <span class="pin" style="left:91%; top:72%">4</span>
+    </div>
+    <div>
+      <h3>The controls</h3>
+      <p><b>1 — NET and HEAD UP.</b> Whether the map may use the network, and whether it turns
+         with you or keeps north at the top. A crossed globe in yellow means you asked for the
+         network and it is not there; in white, that you switched it off yourself.</p>
+      <p><b>2 — REC, SAVE MAP, MEASURE.</b> Record a track, save this area for offline use,
+         and the measuring tool.</p>
+      <p><b>3 — TILT and FOLLOW.</b> Lean the map into 3D; keep the camera on you. Press
+         FOLLOW again after dragging the map to get the camera back.</p>
+      <p><b>4 — Zoom, with AUTO.</b> Plus and minus for gloves and wet screens. With AUTO on,
+         the map opens up when you stop — because stopping is when you are looking for
+         something rather than following it.</p>
+      <p class="muted">The strip along the top is the trip computer: heading, what you are
+         heading for, and speed. The bar at the bottom left is the scale.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/offline-areas.webp" width="540" height="750"
+           alt="Offline maps panel: area name field, the size of the area in kilometres, tile count and estimated megabytes.">
+    </div>
+    <div>
+      <h3>Saving a map for no-signal use</h3>
+      <p>Frame the ground you might walk, press <b>SAVE MAP</b>, and the app downloads exactly
+         what you framed. After that the map draws with the radio off and asks the network for
+         nothing.</p>
+      <p>The panel tells you the size before you commit — kilometres across, number of tiles,
+         megabytes. <b>Your first area is free.</b></p>
+      <p class="muted">Zoom out before saving: the area you see is the area you get.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── ROUTES ───────────────────────── -->
+<section id="routes">
+  <h2>Following a route</h2>
+  <p>Load a route from a file or draw one on the map, then walk or ride it. The app shows the
+     line, the way to it, and how much of it is behind you.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/trip.webp" width="540" height="1170"
+           alt="Trip computer showing LEFT 955 m and the progress ring partly filled.">
+    </div>
+    <div>
+      <h3>Start, finish, and the part in between</h3>
+      <p>Press and hold the route line on the map and you can set <b>START HERE</b> and
+         <b>FINISH HERE</b> anywhere along it — the app then follows only the slice between
+         them, and the header tells you its length against the whole.</p>
+      <p>Both ends are marked on the map: an open ring where the route begins and a chequered
+         disc where it ends. If the route is a loop, the two sit in one place and are labelled
+         as one.</p>
+      <p><b>TURN AROUND</b> walks the same line the other way. You do not need a fix to plan
+         any of this — you can cut a route at the kitchen table.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── MEASURING ───────────────────────── -->
+<section id="measure">
+  <h2>Measuring</h2>
+  <p>One tool, two answers. Tap <b>MEASURE</b>, then tap the map to drop corners. Three corners
+     close a shape by themselves — there is no button to press.</p>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/measure-length.webp" width="540" height="1170"
+           alt="Measuring a length: a pink line across the map with three vertices and a panel reading 545 m over 3 points.">
+    </div>
+    <div>
+      <h3>Distance</h3>
+      <p>Tap along whatever you want the length of — a fence line, a path, a swim, the walk
+         back to the car. The panel counts the total and the number of corners as you go.</p>
+      <p><b>UNDO</b> takes back the last corner, <b>CLEAR</b> starts again, and <b>SAVE</b>
+         keeps the line as a track you can navigate later.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/measure-area.webp" width="540" height="1170"
+           alt="Measuring an area: a filled pink polygon on the map and a panel reading 3.71 hectares.">
+    </div>
+    <div>
+      <h3>Area</h3>
+      <p>Switch the panel to <b>AREA</b> and the same corners become a plot. You get hectares
+         (or acres) and the perimeter, and the shape fills in so you can see what you actually
+         enclosed.</p>
+      <p>Saved plots keep their area. Export them as <b>KML</b> and they stay real areas in
+         Google Earth — see below for why the format matters here.</p>
+      <p class="muted">If the outline crosses itself there is no single area to report, and
+         the app says so rather than inventing a number.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── TRACKS AND FILES ───────────────────────── -->
+<section id="files">
+  <h2>Tracks, points and files</h2>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/saved-tracks.webp" width="540" height="1170"
+           alt="Saved tracks list showing a route with its length, a visibility tick and a menu.">
+    </div>
+    <div>
+      <h3>Your lists</h3>
+      <p><b>Saved</b> holds two lists: points and tracks. The tick on each row controls whether
+         it is drawn on the map — it deletes nothing and switches nothing off, it just keeps
+         the map from getting crowded.</p>
+      <p>Tapping a row takes you to that place on the map. Navigating to it is a separate
+         choice in the row menu, because looking at something and being sent to it are not the
+         same request.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/import.webp" width="540" height="1170"
+           alt="Import result dialog reading Imported 1 track.">
+    </div>
+    <div>
+      <h3>Import — GPX, KML and KMZ</h3>
+      <p><b>ADD</b> opens a file. GPX is what trail portals and GPS units hand out; KML and KMZ
+         are what Google Maps, My Maps and Google Earth hand out. All three go in.</p>
+      <p>The app works out which is which by looking inside the file, not at its name — a file
+         renamed by a messenger app, or a KMZ saved with a <code>.kml</code> ending, still
+         opens.</p>
+      <p class="muted">A file with unreadable points imports the readable ones and tells you
+         how many it skipped. A partial import you know about beats a silent one.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/export-format.webp" width="540" height="1170"
+           alt="Export format dialog offering GPX and KML with a one-line description of each.">
+    </div>
+    <div>
+      <h3>Export — and which format to pick</h3>
+      <p><b>EXPORT</b> sends out whatever is ticked in the list, as one file, and asks which
+         format first.</p>
+      <ul>
+        <li><b>GPX</b> — hiking apps, GPS units, trail portals.</li>
+        <li><b>KML</b> — Google Earth and Maps. <b>Keeps measured plots as real areas.</b></li>
+      </ul>
+      <p>That last line is the whole reason the choice exists. GPX has no idea of a polygon, so
+         a plot written to GPX comes back as a plain line and the hectares are gone. If your
+         selection contains measured plots the dialog says so before you choose.</p>
+      <p class="muted">Import and export are free, in every format. Getting your own data out
+         of an app was never something to sell.</p>
+    </div>
+  </div>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/saved-points.webp" width="540" height="1170"
+           alt="Saved points list showing one point with its distance and coordinates.">
+    </div>
+    <div>
+      <h3>Points</h3>
+      <p>Each row carries the distance from where you are now, so the list sorts itself in your
+         head. Rename, navigate, export or delete from the row menu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── SUN ───────────────────────── -->
+<section id="sun">
+  <h2>Sun and moon</h2>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/sun-moon.webp" width="540" height="1170"
+           alt="Compass face with a sun marker on the rim, sunrise and sunset times and a moon drawn in its real phase.">
+    </div>
+    <div>
+      <h3>How much daylight is left</h3>
+      <p>Press and hold <b>ALTITUDE</b>. The sun appears on the rim of the compass in the
+         direction it is actually in, with sunrise and sunset for your position and today's
+         date. Hold again to put it away.</p>
+      <p>The moon is drawn in its <b>real phase</b> for where you are standing — the lit part
+         is the lit part, with the percentage next to it. You can see at a glance whether
+         tonight gives you a full moon to walk by or nothing at all.</p>
+      <p class="muted">No network needed. It is arithmetic, not a lookup.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── SIGNAL ───────────────────────── -->
+<section id="signal">
+  <h2>The receiver, with the lid off</h2>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/gps-signal.webp" width="540" height="1170"
+           alt="GPS signal screen: strong fix, claimed and measured accuracy, interference section and an action hint.">
+    </div>
+    <div>
+      <h3>GPS signal</h3>
+      <p>Tap the signal bars at the top of the main screen. You get what the chip claims, what
+         the app measured by watching the position drift while you stood still, satellites per
+         constellation, and a live sky globe.</p>
+      <h3>Interference, said carefully</h3>
+      <p>The app can tell a blocked sky from a drowned signal — trees and a roof look the same
+         from the outside, and calling one the other is how a warning gets ignored when it is
+         finally real.</p>
+      <p><b>It will not accuse anything until it has first seen clean sky.</b> Jamming is a
+         <i>change</i> from a good baseline, so until the detector has held a solid fix in the
+         open it says exactly that and gives no verdict. An app that cries jamming in your own
+         kitchen has taught you to ignore it by the time it matters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── SETTINGS ───────────────────────── -->
+<section id="settings">
+  <h2>Settings worth knowing about</h2>
+
+  <div class="shot">
+    <div class="frame">
+      <img src="assets/shots/settings.webp" width="540" height="1170"
+           alt="Settings screen with theme, compass style and position marker choices.">
+    </div>
+    <div>
+      <h3>Three themes</h3>
+      <p><b>Tactical</b> is black and green for low light. <b>Daylight</b> is a light,
+         sun-readable scheme for a bright screen outdoors. <b>Red Night</b> keeps your dark
+         adaptation.</p>
+      <h3>Compass style and marker</h3>
+      <p>Four dial engravings and four position markers, in whatever colour you can pick out
+         against your ground. The marker goes grey whenever the position is not current — so a
+         stale fix never looks like a live one.</p>
+      <h3>Units, coordinates, screen</h3>
+      <p>Metric or imperial; decimal degrees, degrees and minutes, or DMS; keep the screen
+         awake while the app is open. Background recording has its own switch and explains what
+         Android does to apps that sleep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── PRO ───────────────────────── -->
+<section id="pro" class="pro">
+  <h2>What PRO adds</h2>
+  <p>PRO is about maps, and only about maps.</p>
+  <div class="cards">
+    <div class="card">
+      <h4>FREE FOREVER</h4>
+      <p>Compass, waypoints, tracks, route following, measuring, sun and moon, the signal
+         screen — and <b>import and export in every format</b>. Plus one saved map area.</p>
+    </div>
+    <div class="card">
+      <h4>PRO</h4>
+      <p>Maps from the server at full detail, and as many saved offline areas as you like.
+         One payment, not a subscription.</p>
+    </div>
+    <div class="card">
+      <h4>NOT SOLD</h4>
+      <p>Your position, your tracks, your points. Nothing is uploaded, there is no account and
+         there are no ads. See the <a href="privacy.html">privacy note</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── EVERY SCREEN ───────────────────────── -->
+<section id="screens">
+  <h2>Every screen, at a glance</h2>
+  <div class="gallery">
+    <figure>
+      <img src="assets/shots/compass.webp" width="540" height="1170" alt="Compass face.">
+      <figcaption><b>COMPASS</b><span>Gyro heading with the target arrow.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/speedo.webp" width="540" height="1170" alt="Speedometer face.">
+      <figcaption><b>SPEEDOMETER</b><span>Scale, needle and the peak of the ride.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/trip.webp" width="540" height="1170" alt="Trip computer face.">
+      <figcaption><b>TRIP COMPUTER</b><span>Distance, time and progress along the route.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/level.webp" width="540" height="1170" alt="Level face.">
+      <figcaption><b>LEVEL</b><span>Artificial horizon, zeroed where you like.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/dial-map.webp" width="540" height="1170" alt="Map dial face.">
+      <figcaption><b>MAP FACE</b><span>The map inside the instrument.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/map.webp" width="540" height="1170" alt="Map screen.">
+      <figcaption><b>MAP</b><span>Route, tools left, camera right.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/measure-length.webp" width="540" height="1170" alt="Measuring length.">
+      <figcaption><b>DISTANCE</b><span>Tap corners, read the total.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/measure-area.webp" width="540" height="1170" alt="Measuring area.">
+      <figcaption><b>AREA</b><span>Hectares and perimeter.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/averaging.webp" width="540" height="1170" alt="Averaging a point.">
+      <figcaption><b>AVERAGED POINT</b><span>Thirty seconds of standing still.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/export-format.webp" width="540" height="1170" alt="Export format choice.">
+      <figcaption><b>EXPORT</b><span>GPX or KML, your choice.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/sun-moon.webp" width="540" height="1170" alt="Sun and moon.">
+      <figcaption><b>SUN &amp; MOON</b><span>Daylight left and tonight's phase.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/gps-signal.webp" width="540" height="1170" alt="GPS signal screen.">
+      <figcaption><b>GPS SIGNAL</b><span>What the receiver is really doing.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/saved-tracks.webp" width="540" height="1170" alt="Saved tracks.">
+      <figcaption><b>SAVED</b><span>Points and tracks, yours to export.</span></figcaption>
+    </figure>
+    <figure>
+      <img src="assets/shots/settings.webp" width="540" height="1170" alt="Settings.">
+      <figcaption><b>SETTINGS</b><span>Themes, styles, units.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────────────────── PRIVACY ───────────────────────── -->
+<section id="privacy">
+  <h2>Your position never leaves the phone</h2>
+  <p>BackTrack has no account, no analytics and no ads. Your points, tracks and position stay
+     on the device. The only thing that touches the network is map tiles, and only when you
+     have the network switched on — an app used with the radio off should behave as if the
+     radio is off.</p>
+  <p><a class="btn" href="privacy.html">Read the privacy note</a></p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>BackTrack</b> — offline GPS compass, routes, tracks and field measuring for Android.</p>
+    <p class="muted">ForgeLabs Systems · <a href="mailto:iwelautomatyka@gmail.com">iwelautomatyka@gmail.com</a> · <a href="privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
